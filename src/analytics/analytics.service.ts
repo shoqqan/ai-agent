@@ -1,6 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { Laminar } from '@lmnr-ai/lmnr';
 import { ConfigService } from '@nestjs/config';
+import * as Anthropic from '@anthropic-ai/sdk';
 
 @Injectable()
 export class AnalyticsService {
@@ -11,6 +12,9 @@ export class AnalyticsService {
       baseUrl: 'http://localhost',
       httpPort: 8000,
       grpcPort: 8001,
+      instrumentModules: {
+        anthropic: Anthropic,
+      },
     });
   }
 }

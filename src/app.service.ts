@@ -17,13 +17,9 @@ export class AppService implements OnModuleInit {
   }
 
   getDummyResponse() {
-    return observe({ name: 'get_dummy_response' }, () => {
-      return 'dummy response';
-    });
+    return 'dummy response';
   }
   callLLM() {
-    return observe({ name: 'call_llm' }, () => {
-      return this.llmService.chat('What is the meaning of life?');
-    });
+    return this.llmService.chat('What is the meaning of life?');
   }
 }

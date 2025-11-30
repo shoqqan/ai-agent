@@ -20,6 +20,7 @@
     "test:e2e": "jest --config ./test/jest-e2e.json"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.71.0",
     "@lmnr-ai/lmnr": "^0.7.9",
     "@nestjs/common": "^11.0.1",
     "@nestjs/config": "^4.0.2",
